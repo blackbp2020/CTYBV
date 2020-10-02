@@ -1,0 +1,41 @@
+{% load static %}
+<nav class="navbar navbar-expand-md navbar-toggleable-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+       <a href="#" class="navbar-branch ml-sm-10 ml-md-10 ml-xl-5">
+       <img src="{% static 'images/Logo_text.png' %}" alt="logo" height="100">
+       </a> 
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target:="#navbarResponsive">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+             <li class="nav-item">
+                <a href="{% url 'index'%}" class="nav-link active"><i class="fa fa-home" aria-hidden="true"> Trang Chủ</i></a>
+             </li>
+             <li class="nav-item">
+                <a href="{% url 'about' %}" class="nav-link"><i class="fa fa-building" aria-hidden="true"> Giới Thiệu</i></a>
+             </li>
+             <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fab fa-servicestack" aria-hidden="true"> Dịch Vụ</i>
+               </a>
+                                
+                  <div class="dropdown-menu dropmenuedit" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{% url 'service' %}"><i style="font-weight: 5;">Bảo vệ mục tiêu cố định</i></a>
+                    <a class="dropdown-item " href="{% url 'service' %}"><i>Bảo vệ nhà xưởng</i></a>
+                    <a class="dropdown-item" href="{% url 'service' %}"><i>Bảo vệ ngân hàng</i></a>
+                  </div>
+                         
+             </li>
+             <li class="nav-item">
+                <a href="{% url 'news' %}" class="nav-link"><i class="far fa-newspaper" aria-hidden="true"> Tin Tức</i></a>
+             </li>
+             <li class="nav-item">
+                <a href="{% url 'lienhe' %}" class="nav-link"><i class="fas fa-id-card-alt" aria-hidden="true"> Liên Hệ</i></a>
+             </li>
+          </ul>
+       </div>
+    </div>
+   </nav>
+    <!-- navbar end -->
+   

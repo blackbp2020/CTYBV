@@ -1,0 +1,16 @@
+{% extends "base/main.html" %}
+{% block content %}
+ <div class="col-md-9 animate__animated animate__lightSpeedInRight">
+    <nav class="navbar navtieude">
+        <div class="textabout"><h6><b>{{ object.TenBai }}</b></h6></div>
+    </nav>
+    <div class="text">
+      <p> {{ object.noidung | safe  }}</p>
+    </div>
+        
+    
+ </div>
+ {% endblock content %} 
+
+ 
+

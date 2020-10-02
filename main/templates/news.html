@@ -1,0 +1,25 @@
+{% extends "base/main.html" %}
+{% block content %}
+ <div class="col-md-9 animate__animated animate__lightSpeedInRight">
+    <nav class="navbar navtieude">
+        <div class="textabout"><h6><b>Tin Tức - Các Thông Tin Sự Kiện của Đơn Vị</b></h6></div>
+    </nav>
+    <div class="card-group">
+    {% for new in object_list %}
+    <a href="{{ new.get_absolute_url }}"> 
+    <div class="card cardnews" style="width: 18rem;"  style="display: block;">
+        <img src="{{ new.image }}" class="card-img-top cardnewimage" alt="hinh anh">
+        <div class="card-body">
+          <h5 class="card-title cardnewtitle">{{ new.TenBai  }}</h5>
+          <p class="card-text cardnewtext" > {{ new.noidung | safe}}</p>          
+        </div>
+    </div>   
+    </a>
+    
+    <hr>
+   {% endfor %}
+  </div>
+        
+    
+ </div>
+ {% endblock content %}

@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% include "base/head.html" %}
+<body>  
+   <!-- navbar start -->
+  {% include "base/navbar.html" %}    
+  
+   <!-- navbar end -->
+    <!--slider-->  
+  <div class="container"> 
+   {% include "base/slider.html" %}
+      <!--Content text-->
+      <section id="header1">
+         <hr class="display-2">
+         <div class="row ">
+         {% include "base/frame.html" %}
+         
+
+         {% block content %}
+         {% endblock content %}
+         </div>
+         
+      </section>
+      <!--Content end-->
+  </div> 
+<!-- ----------------------------------------Footer------------------------------------------------------>
+{% include "base/footer.html" %}
+<!--EndFooter-->  
+</body>
+</html>
